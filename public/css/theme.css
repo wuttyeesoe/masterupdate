@@ -1,4 +1,3 @@
-
 .danger{
      color: red;
      font-weight: bold;
@@ -11,8 +10,14 @@
  }
  .large{
      text-align: center;
-     
  }
+ .small{
+    
+     margin-left: 480px;
+     margin-right: 480px;
+     margin-top:200px;
+ }
+
  .first{
     border: 2px solid #a1a1a1;
     padding: 5px 20px; 
@@ -23,23 +28,25 @@
     margin-left:20px;
  }
  .second{
-     margin-left:100px;
+     margin-left:85px;
  }
  .third{
     border: 1px solid #a1a1a1;
+/*    padding: 4px 3px;*/
     width: 60px;
     font-size: 16px;
-    background-color:silver;
-    margin-left:150px;
+    background-color:lightblue;
+    margin-left:152px;
  }
+
 * { box-sizing: border-box; margin: 0; padding:0; }
 
-body {
+.six {
+  background: #95a5a6;
   background:none;
   margin-top:150px;
-  background-color: #e3e3e3;
-/*  background-image:url("/MasterUpdate/public/img/1.jpg");*/
+/* background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_embroidery.png);*/
+  background-image: url("/MasterUpdate/public/img/wood.jpeg");
   background-size:100%;
-  background-repeat: no-repeat;
-  font-family: 'Helvetica Neue', Arial, Sans-Serif;
+font-family: 'Helvetica Neue', Arial, Sans-Serif;
 }

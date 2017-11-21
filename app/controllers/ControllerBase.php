@@ -9,6 +9,7 @@ class ControllerBase extends Controller
     {
         $this->view->url = $this->url->getBaseUri();
         $this->tag->prependTitle('MasterUpdate');
+        
     }
         
      protected function forward($uri)

@@ -4,7 +4,8 @@
  *
  * @var \Phalcon\Config $config
  */
-
+use Phalcon\Crypt;
+use Phalcon\Http\Response\Cookies;
 use Phalcon\Di\FactoryDefault;
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\Url as UrlResolver;
@@ -80,8 +81,8 @@ $di->setShared('modelsMetadata', function () {
  */
 $di->set('flash', function () {
     return new Flash(array(
-        'error'   => 'alert alert-danger',
-        'success' => 'alert alert-success',
+        'error'   => 'danger',
+        'success' => 'success',
         'notice'  => 'alert alert-info',
         'warning' => 'alert alert-warning'
     ));
@@ -96,3 +97,23 @@ $di->setShared('session', function () {
 
     return $session;
 });
+$di->set(
+    "cookies",
+    function () {
+        $cookies = new Cookies();
+
+        $cookies->useEncryption(false);
+
+        return $cookies;
+    }
+);
+$di->set(
+    "crypt",
+    function () {
+        $crypt = new Crypt();
+
+        $crypt->setKey('#1dj8$=dp?.ak//j1V$'); // Use your own key!
+
+        return $crypt;
+    }
+);

@@ -1,3 +1,22 @@
 
-<?= $this->getContent() ?>
-<h1>hello</h1>
+<div><ul><li><a href="/MasterUpdate/index/end">Log Out</a></li></ul></div><br>
+<div class="success">
+<?= 'Welcome, '. $username.'! Your login is successfully' ?>
+</div><br>
+<?php echo $this->getContent(); ?>
+<html>
+    <head>File Upload</head>
+<body>
+<form enctype="multipart/form-data" action="/MasterUpdate/upload/fileupload/" method="post">
+  <input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+  <table width="600">
+  <tr>
+  <td>Names file:</td>
+  <td><input type="file" name="files[]" multiple="multiple" required/></td>
+  <td><input type="submit" value="Upload" /></td>
+  </tr>
+  </table>
+  
+  </form>
+  </body>
+  </html>
